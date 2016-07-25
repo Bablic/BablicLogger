@@ -6,7 +6,7 @@ class BablicLogger
 module.exports = (component) ->
   func = (object, args...) ->
     if typeof(object) isnt 'object'
-      object += ' '+args[x] for x of args if args.length > 0
+      object += ' ' + args.join ' '
       object = {message: object}
     func.info object
 

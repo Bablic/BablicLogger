@@ -15,14 +15,10 @@ BablicLogger = (function() {
 module.exports = function(component) {
   var func;
   func = function() {
-    var args, object, x;
+    var args, object;
     object = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
     if (typeof object !== 'object') {
-      if (args.length > 0) {
-        for (x in args) {
-          object += ' ' + args[x];
-        }
-      }
+      object += ' ' + args.join(' ');
       object = {
         message: object
       };
