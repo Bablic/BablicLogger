@@ -17,7 +17,7 @@ module.exports = function(component) {
   func = function() {
     var args, object;
     object = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
-    if (typeof object !== 'object') {
+    if (typeof object !== 'object' || object === null) {
       object += ' ' + args.join(' ');
       object = {
         message: object
