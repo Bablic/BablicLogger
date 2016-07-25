@@ -22,6 +22,8 @@ module.exports = function(component) {
       object = {
         message: object
       };
+    } else {
+      object = Object.assign({}, object);
     }
     return func.info(object);
   };

@@ -8,6 +8,8 @@ module.exports = (component) ->
     if typeof(object) isnt 'object' or object is null
       object += ' ' + args.join ' '
       object = {message: object}
+    else
+      object = Object.assign {}, object
     func.info object
 
   func.log = ({user_id, site_id, message, data}) ->
