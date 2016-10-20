@@ -51,7 +51,6 @@ module.exports = function(component) {
     user_id = arg.user_id, site_id = arg.site_id, message = arg.message, data = arg.data;
     object = arguments[0];
     object.log_level = 'warn';
-    object.caller = arguments.callee.caller.toString();
     return this.log(object);
   };
   func.error = function(arg) {

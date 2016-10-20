@@ -28,7 +28,6 @@ module.exports = (component) ->
   func.warn =  ({user_id, site_id, message, data}) ->
     object = arguments[0]
     object.log_level = 'warn'
-    object.caller = arguments.callee.caller.toString()
     this.log object
 
   func.error = ({user_id, site_id, message, data}) ->
